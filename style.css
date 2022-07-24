@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --login-bg: rgba(255, 255, 255, 0.3);
+    --title-bg: white;
+    --button-bg: rgba(0, 8, 255, 0.799);
+    --image-bg: rgba(255, 255, 255, 0.15);
+    --blue: #000dff;
+    --red: rgba(255, 25, 0, 0.8);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    /* background-image: linear-gradient(to top, #1d19ff 0%, #ff2424 100%); */
+    /* background: linear-gradient(45deg, red, blue); */
+    background-image: url("./src/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.299);
+}
+
+.login-info-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--login-bg);
+}
+
+.image-container {
+    padding: 3rem;
+    width: 50%;
+    background-color: var(--image-bg);
+    object-fit: scale-down;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+.login-info-container>p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    width: 85%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-info-container>img {
+    max-width: 50px;
+}
+
+.input,
+.btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.input {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.input:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.input:focus {
+    outline: 2px solid var(--button-bg);
+}
+
+
+.btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--red);
+}
+
+.span {
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.span:hover {
+    color: var(--red);
+}
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+    }
+
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .image-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
+
+    .login-info-container>p {
+        margin: 0;
+    }
+}
