@@ -2,29 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Log in</title>
 </head>
 
-<body>
-    <div class="login-container">
-        <div class="login-info-container">
-            <img src="./src/icon.png" alt="" srcset="">
-            <h1 class="title">Log in</h1>
-            <form class="inputs-container">
-                <input class="input" type="text" placeholder="Email">
-                <input class="input" type="password" placeholder="Password">
-                <p>¿Forgot password?<a href="passwordReset.html" class="span"> Click here</a></p>
-                <button class="btn">login</button>
-                <p>¿Don't have an account?<a href="signUp.html" class="span"> Sign Up</a></p>
-            </form>
-        </div>
-        <img class="image-container" src="src/bank1.png" alt="">
-    </div>
+<body class="bg-secondary bg-opacity-75 bg-gradient vh-100 ">
 
+  <header>
+    <nav class="navbar bg-secondary bg-opacity-75">
+      <div class="container-fluid">
+        <a class="navbar-brand tex text-light fs-2 d-flex justify-content-between align-items-center"
+          href="ingeBank.html">
+          <img src="./src/logo.png" alt="" width="50" height="50">
+          <span class="fw-bold">IngBank</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container d-flex justify-content-center align-items-center mt-5 h-75">
+    <div class="row">
+
+      <div class="col-7 d-none d-md-block">
+        <img src="./src/banco.png" alt="" class="w-75 p-3 align-self-center">
+      </div>
+
+      <div class="col d-flex flex-column justify-content-center align-items-around">
+        <img src="./src/icon.png" alt="" class=" w-25 mb-3 align-self-center">
+        <form>
+          <div class="form-floating mb-3 ">
+            <input type="email" class="form-control bg-secondary bg-opacity-25 border border-0" id="inputEmail"
+              placeholder="name@example.com">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control bg-secondary bg-opacity-25 border border-0" id="inputPassword"
+              placeholder="Password">
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3 w-100" id="btnLogin"><a href="#"
+              class="text-light text-decoration-none">Iniciar Sesión</a></button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+  <script src="DB.js"></script>
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
